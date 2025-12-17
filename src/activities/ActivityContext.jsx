@@ -71,7 +71,7 @@ export const ActivityProvider = ({ children }) => {
 export const useActivity = () => {
   const context = useContext(ActivityContext);
   if (!context) {
-    throw new Error("Must be able to use Activity Provider");
+    throw new Error("Must be used within Activity Provider");
   }
   return context;
 };
